@@ -51,7 +51,7 @@ CREATE TABLE item (
     item_estimated_delivery DATE NULL,
     item_entry_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     item_exit_time TIMESTAMP NULL,
-    space_code CHAR(4) NULL,
+    space_code CHAR(4) NOT NULL,
     CONSTRAINT fk_storage_space FOREIGN KEY(space_code) REFERENCES storage_space(space_code) ON DELETE SET NULL
 );
 
